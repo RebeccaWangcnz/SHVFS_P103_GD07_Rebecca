@@ -23,14 +23,14 @@ public class GetScores : MonoBehaviour
     {
         if (other.GetComponent<Zone>())
         {
-            other.GetComponent<Zone>().ChangeMember(teamID,true);
+            //other.GetComponent<Zone>().ChangeMember(teamID,true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<Zone>())
         {
-           other.GetComponent<Zone>().ChangeMember(teamID,false);
+           //other.GetComponent<Zone>().ChangeMember(teamID,false);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -41,18 +41,18 @@ public class GetScores : MonoBehaviour
             //AddScores();
         }
     }
-    private void AddScores()
-    {
-        if (timer < tick)
-        {
-            timer += Time.deltaTime;
-        }
-        else
-        {
-            timer = 0f;
-           // scores += x;
-           // scoreText.text = "Scores: " + scores.ToString();
-            //TeamPointSystem.Instance.ScorePoints();
-        }
-    }
+    //private void AddScores()
+    //{
+    //    if (timer < tick)
+    //    {
+    //        timer += Time.deltaTime;
+    //    }
+    //    else
+    //    {
+    //        timer = 0f;
+    //       // scores += x;
+    //       // scoreText.text = "Scores: " + scores.ToString();
+    //        //TeamPointSystem.Instance.ScorePoints();
+    //    }
+    //}
 }
